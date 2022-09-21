@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageVersion>1.0</PackageVersion>
+        <PackageId>JasonTaylorDev.AwesomeConsole</PackageId>
+        <Title>Awesome Console App</Title>
+        <Authors>JasonTaylorDev</Authors>
+        <Description>A project for creating a command-line application that can run on .NET on Windows, Linux and macOS with support for commands, dependency injection, logging, and a whole lot more.</Description>
+        <PackageTags>dotnet-new;templates;console</PackageTags>
+        <TargetFramework>net7.0</TargetFramework>
+        <RepositoryUrl>https://github.com/jasontaylordev/AwesomeConsole</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>AwesomeConsole</ContentTargetFolders>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="AwesomeConsole\**\*" Exclude="AwesomeConsole\**\bin\**;AwesomeConsole\**\obj\**" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+
+</Project>

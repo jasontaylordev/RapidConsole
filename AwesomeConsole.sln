@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		README.md = README.md
+		templatepack.csproj = templatepack.csproj
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwesomeConsole", "AwesomeConsole\AwesomeConsole.csproj", "{867127F5-7716-4F83-92B3-161090267FDC}"

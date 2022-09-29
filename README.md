@@ -17,6 +17,6 @@ Create a new app:
 dotnet new awesome-console --output AwesomeConsole
 ```
 
-Check out [Console App Project Template for .NET 7](https://jasontaylor.dev/?p=2722) to learn more.
+Check out [Console App Project Template for .NET 7](https://jasontaylor.dev/console-app-project-template/) to learn more.
 
 If you find this project useful, please give it a star. Thanks! ⭐

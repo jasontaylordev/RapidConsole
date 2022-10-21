@@ -5,6 +5,8 @@
 
 A project template for creating a command-line application that can run on .NET on Windows, Linux and macOS with support for commands, dependency injection, logging, and a whole lot more.
 
+![image](https://user-images.githubusercontent.com/1988321/197191492-a98bd1f3-09e6-4eea-bcca-5596be88676d.png)
+
 Install the project template (requires .NET 7):
 
 ```bash

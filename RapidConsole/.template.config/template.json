@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "JasonTaylorDev",
+  "classifications": [
+    "Common",
+    "Console"
+  ],
+  "name": "Rapid Console App",
+  "description": "A project for creating a command-line application that can run on .NET on Windows, Linux and macOS with support for commands, dependency injection, logging, and a whole lot more.",
+  "identity": "JasonTaylorDev.RapidConsole",
+  "shortName": "rapid-console",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "TargetFrameworkOverride": {
+      "type": "parameter",
+      "description": "Overrides the target framework",
+      "replaces": "TargetFrameworkOverride",
+      "datatype": "string",
+      "defaultValue": "",
+      "displayName": "Target framework override"
+    }
+  },
+  "sourceName": "RapidConsole",
+  "preferNameDirectory": true
+}

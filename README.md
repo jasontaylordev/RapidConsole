@@ -7,7 +7,11 @@ A project template for creating a command-line application that can run on .NET 
 
 ![image](https://user-images.githubusercontent.com/1988321/197191492-a98bd1f3-09e6-4eea-bcca-5596be88676d.png)
 
-Install the project template (requires .NET 7):
+If you find this project useful, please give it a star. Thanks! ⭐
+
+## Getting Started
+
+Install the project template (requires .NET 8):
 
 ```bash
 dotnet new install JasonTaylorDev.RapidConsole
@@ -19,6 +23,16 @@ Create a new app:
 dotnet new rapid-console --output RapidConsole
 ```
 
-Check out [Console App Project Template for .NET 7](https://jasontaylor.dev/console-app-project-template/) to learn more.
+## Versions
 
-If you find this project useful, please give it a star. Thanks! ⭐
+The main branch is now on .NET 8.0. The following previous versions are available:
+
+* [7.0](https://github.com/jasontaylordev/RapidConsole/tree/net7.0)
+
+## Learn More
+
+Check out [Console App Project Template for .NET](https://jasontaylor.dev/console-app-project-template/) to learn more.
+
+## Support
+
+If you are having problems, please let me know by [raising a new issue](https://github.com/jasontaylordev/RapidConsole/issues/new).

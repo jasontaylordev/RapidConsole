@@ -7,7 +7,7 @@ using Spectre.Console;
 using Spectre.Console.Cli;
 
 AnsiConsole.Write(new FigletText("RapidConsole"));
-AnsiConsole.WriteLine("RapidConsole Command-line Tools 1.0.0");
+AnsiConsole.WriteLine("RapidConsole Command-line Tools 1.1.0");
 AnsiConsole.WriteLine();
 
 var builder = Host.CreateDefaultBuilder(args);

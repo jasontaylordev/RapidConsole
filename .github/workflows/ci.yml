@@ -24,10 +24,10 @@ jobs:
         dotnet-version: '9.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore RapidConsole.sln
+      run: dotnet restore
   
     - name: Build solution
-      run: dotnet build RapidConsole.sln --no-restore --configuration Release
+      run: dotnet build --no-restore --configuration Release
   
     - name: Run tests
-      run: dotnet test RapidConsole.sln --no-build --verbosity normal --configuration Release
+      run: dotnet test --no-build --verbosity normal --configuration Release

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageVersion>1.2</PackageVersion>
+        <PackageId>JasonTaylorDev.RapidConsole</PackageId>
+        <Title>Rapid Console App</Title>
+        <Authors>JasonTaylorDev</Authors>
+        <Description>A project for creating a command-line application that can run on .NET on Windows, Linux and macOS with support for commands, dependency injection, logging, and a whole lot more.</Description>
+        <PackageTags>dotnet-new;templates;console</PackageTags>
+        <TargetFramework>net9.0</TargetFramework>
+        <RepositoryUrl>https://github.com/jasontaylordev/RapidConsole</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>RapidConsole</ContentTargetFolders>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="**\*" Exclude="**\bin\**;**\obj\**;templatepack.csproj" />
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+        <Compile Remove="**\*" />
+    </ItemGroup>
+
+</Project>

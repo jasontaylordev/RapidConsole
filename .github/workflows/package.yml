@@ -1,0 +1,35 @@
+name: Package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'templatepack.csproj'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - uses: nuget/setup-nuget@v1
+      name: Setup NuGet
+      with:
+        nuget-version: '6.x'
+
+    - name: Package NuGet
+      run: dotnet pack RapidConsole/templatepack.csproj --configuration Release --output ./nupkg
+
+    - name: Publish to NuGet
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ./nupkg/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json --skip-duplicate

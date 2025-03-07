@@ -11,7 +11,7 @@ If you find this project useful, please give it a star. Thanks! ⭐
 
 ## Getting Started
 
-Install the project template (requires .NET 8):
+Install the project template (requires .NET 9):
 
 ```bash
 dotnet new install JasonTaylorDev.RapidConsole
@@ -25,8 +25,9 @@ dotnet new rapid-console --output RapidConsole
 
 ## Versions
 
-The main branch is now on .NET 8.0. The following previous versions are available:
+The main branch is now on .NET 9. The following previous versions are available:
 
+* [8.0](https://github.com/jasontaylordev/RapidConsole/tree/net8.0)
 * [7.0](https://github.com/jasontaylordev/RapidConsole/tree/net7.0)
 
 ## Learn More

@@ -36,7 +36,7 @@ jobs:
       run: dotnet test --no-build --no-restore --verbosity normal --configuration Release --collect:"XPlat Code Coverage" --results-directory ./coverage
 
     - name: Upload coverage
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: coverage
         path: ./coverage

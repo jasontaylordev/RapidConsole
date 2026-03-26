@@ -8,7 +8,7 @@
         <Authors>JasonTaylorDev</Authors>
         <Description>A project for creating a command-line application that can run on .NET on Windows, Linux and macOS with support for commands, dependency injection, logging, and a whole lot more.</Description>
         <PackageTags>dotnet-new;templates;console</PackageTags>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <RepositoryUrl>https://github.com/jasontaylordev/RapidConsole</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>

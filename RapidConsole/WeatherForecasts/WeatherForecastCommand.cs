@@ -17,7 +17,7 @@ public class WeatherForecastCommand : Command<WeatherForecastSettings>
         _weatherForecastService = weatherForecastService;
     }
 
-    public override int Execute([NotNull] CommandContext context, [NotNull] WeatherForecastSettings settings)
+    public override int Execute([NotNull] CommandContext context, [NotNull] WeatherForecastSettings settings, CancellationToken cancellationToken)
     {
         var unit = settings.Unit ?? 
                    _configuration.GetValue<TemperatureUnit>("Unit");

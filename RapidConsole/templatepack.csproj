@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>2.0</PackageVersion>
+        <PackageVersion>2.0.0</PackageVersion>
         <PackageId>JasonTaylorDev.RapidConsole</PackageId>
         <Title>Rapid Console App</Title>
         <Authors>JasonTaylorDev</Authors>

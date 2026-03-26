@@ -1,0 +1,44 @@
+name: Package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Extract version from release tag
+      id: version
+      if: github.event_name == 'release'
+      run: echo "value=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+    - name: Update package version
+      if: github.event_name == 'release'
+      run: sed -i 's|<PackageVersion>.*</PackageVersion>|<PackageVersion>${{ steps.version.outputs.value }}</PackageVersion>|' RapidConsole/templatepack.csproj
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build solution
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Package NuGet
+      run: dotnet pack RapidConsole/templatepack.csproj --no-build --configuration Release --output ./nupkg
+
+    - name: Publish to NuGet
+      run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate

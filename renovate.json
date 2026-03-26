@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Microsoft.Extensions packages",
+      "matchPackageNames": ["Microsoft.Extensions.**"],
+      "groupName": "Microsoft.Extensions"
+    },
+    {
+      "description": "Group Spectre.Console packages",
+      "matchPackageNames": ["Spectre.Console", "Spectre.Console.Cli"],
+      "groupName": "Spectre.Console"
+    },
+    {
+      "description": "Group xunit packages",
+      "matchPackageNames": ["xunit", "xunit.**"],
+      "groupName": "xunit"
+    },
+    {
+      "description": "Group test tooling packages",
+      "matchPackageNames": ["Microsoft.NET.Test.Sdk", "coverlet.collector"],
+      "groupName": "test tooling"
+    }
+  ]
+}

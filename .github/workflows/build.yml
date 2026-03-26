@@ -1,4 +1,4 @@
-name: .NET
+name: Build
 
 on:
   push:
@@ -8,6 +8,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
@@ -25,9 +28,15 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-  
+
     - name: Build solution
       run: dotnet build --no-restore --configuration Release
-  
+
     - name: Run tests
-      run: dotnet test --no-build --verbosity normal --configuration Release
+      run: dotnet test --no-build --no-restore --verbosity normal --configuration Release --collect:"XPlat Code Coverage" --results-directory ./coverage
+
+    - name: Upload coverage
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage
+        path: ./coverage
